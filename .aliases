@@ -1,3 +1,5 @@
+#get this file and aktivate:
+#cd ~ && sudo wget https://raw.githubusercontent.com/Randomfinger/als/master/.aliases && source $HOME/.aliases
 #https://askubuntu.com/questions/31216/setting-up-aliases-in-zsh
 
 newalias() { 
