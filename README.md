@@ -1,0 +1,2 @@
+# als
+aliases for sh
