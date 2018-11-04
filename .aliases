@@ -1,0 +1,46 @@
+#https://askubuntu.com/questions/31216/setting-up-aliases-in-zsh
+
+newalias() { 
+echo "alias $1=\"$2\"" >> $HOME/.aliases;
+source $HOME/.aliases; 
+}
+
+#alias purge = "sudo dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge"
+
+alias netwerkcp="scp "#copy between hosts on network bsp:~/X.txt root@192.0.0.1:/root/X.txt
+
+alias findfile="locate -b " #'/.aliases' # search for a file by its exact name (not *name*)
+
+alias netzwerkinfo="netstat -a | more" #conns, routing, interface, masquerade, multicast
+
+alias hg="history | sed -z 's/\n\s*[0-9]*/\n/g' | cut -c 1-300 | sort | uniq | grep"
+
+alias up="sudo apt update && sudo apt upgrade && npm update --save/--save-dev"
+
+alias forEach="xargs" #echo /home/X /home/Y | xargs cp X.txt"
+
+#alias shutdownat="echo 'shutdown -h now' | at -m " #zb. 23:55
+
+alias zeilenindir="find . -name '*' | xargs wc -l"
+
+alias todo="git log --all --grep='R5' -i"
+alias diskspaceusage="df -h" #free -h 
+alias hardwareinfo="sudo lshw | more"
+alias eline="awk 'NR % 2 == 0'"
+alias d="cd /home/ced/Desktop"
+alias alleprozesse="ps -aux"
+alias glg="git log | grep "
+alias gcm="git commit . -m"
+alias taskmanager="glances"
+alias als="cat ~/.aliases"
+alias deepls="ls -LR"
+alias nmn=" nodemon "
+alias del="rm -rf "
+alias global="env"
+alias calc="expr "
+alias fm="tail -f"
+alias cls="clear"
+alias hä="whatis"
+alias h="cd ~"
+
+alias cheat="firefox https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/"
