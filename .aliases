@@ -16,6 +16,7 @@ alias findfile="locate -b " #'/.aliases' # search for a file by its exact name (
 alias netzwerkinfo="netstat -a | more" #conns, routing, interface, masquerade, multicast
 
 alias hg="history | sed -z 's/\n\s*[0-9]*/\n/g' | cut -c 1-300 | sort | uniq | grep"
+alias gh="hg"
 
 alias up="sudo apt update && sudo apt upgrade && npm update --save/--save-dev"
 
