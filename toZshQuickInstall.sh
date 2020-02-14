@@ -13,7 +13,6 @@ plugins=(
   history-substring-search
 )
 
-source $ZSH/oh-my-zsh.sh;
 source $HOME/.aliases;
 #+++
 " >> ~/.zshrc
