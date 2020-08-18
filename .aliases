@@ -47,3 +47,32 @@ alias hä="whatis"
 alias h="cd ~"
 
 alias cheat="firefox https://www.cheatography.com/davechild/cheat-sheets/linux-command-line/"
+
+
+#ps für node nginx docker pm2 & netstat
+alias psc="echo node, nginx, docker: && sudo ps -fC node,nginx,docker && printf '\n docker ps: '&& sudo docker ps &&printf '\npm2 ps:' && sudo pm2 ps && printf '\nnetstat:' && sudo netstat -tlpen | grep -v '127.0.0.1'"
+
+alias lognginx="printf '\nletzter error\n' && sudo tail -n 1 /var/log/nginx/error.log && printf '\nletzter acess\n' && tail -n 1 /var/log/nginx/access.log.1 || tail -n 1 /var/log/nginx/access.log && printf '\nletsencrypt\n' && tail -n 3 /var/log/letsencrypt || printf '\npm2 logs\n' && pm2 logs "
+
+
+
+#One liner to stop / remove all of Docker containers:
+alias dockerstopall="sudo docker stop $(sudo docker ps -a -q)"
+alias dockerrmall="sudo docker rm $(sudo docker ps -a -q)"
+#clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container)
+alias dockerrmall="sudo docker system prune -a"
+
+#stop nginx local 
+alias nginxstop="echo pid von niginx an folgenden Befehl anhängen: sudo kill -QUIT [pid...]"
+
+alias serverstop="dockerstopall && nginxstop"
+
+#sudo solange terminal offen ist
+alias sudoforever="sudo -s"
+
+alias dc="sudo docker-compose "
+alias dcu="sudo docker-compose up"
+alias dcb="dc build"
+alias dcr="dc restart"
+alias dcs="dc stop"
+alias dcp="dc ps"%        
